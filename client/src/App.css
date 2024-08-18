@@ -1,151 +1,87 @@
-.App {
-  text-align: center;
-  color: white;
-}
-.account
-{
-  color: rgb(113, 47, 146);
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-.background
-{
-  background-color: #151414;
-  height: 100vh;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-.des
-{
-  color: rgb(212, 192, 222);
-  font-size: 30px;
-  font-family: ''Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif'; 
-  width: 50%;
-  margin-left: 25%;
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
-}
-.App-header {
-  background-color: #556381;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-html {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-.bg {
-  background:black
-}
-
-
-
-.content {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 0.25em;
-  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
-  box-sizing: border-box;
-  left: 50%;
-  padding: 10vmin;
-  position: fixed;
-  text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-h1 {
-  font-family: monospace;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(-25%);
-  }
-  100% {
-    transform: translateX(25%);
-  }
+:root{
+  --primary-color: #a601ff;
+  --secondary-color: #bf35fa;
+  --heading-color: #0b2727;
+  --text-color: #37393c;
+  --font-name: "Montserrat", sans-serif;
+  --subtitle-font-name: "Island Moments", cursive;
 }
 
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  height: 900px;
-}
-header {
-  text-align: center;
-  width: 100%;
-  height: auto;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  overflow: hidden;
-  border-radius: 0 0 85% 85% / 30%;
-}
-header .overlay {
-  width: 100%;
-  height: 100%;
-  padding: 50px;
-  color: #fff;
-  text-shadow: 1px 1px 1px #333;
-  background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
+  font-family: var(--font-name);
 }
 
-h1 {
-  font-family: "Dancing Script", cursive;
-  font-size: 60px;
-  margin-bottom: 30px;
+section {
+  padding: 50px 0px;
 }
 
+h1,
+h2,
 h3,
-p {
-  font-family: "Open Sans", sans-serif;
-  margin-bottom: 30px;
-}
-.share {
-  padding: 16px;
-  margin-top: 10px;
-  vertical-align: center;
-  background: #49155e;
-  width: 70px;
-  height: 45px;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 13px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: -1;
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
 }
 
-.share:hover {
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+a {
+  text-decoration: none;
+  color: unset;
+}
+ul {
+  list-style: none;
+}
+
+.primary__btn {
+  background: var(--secondary-color) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  padding: 0.4rem 1.5rem !important;
+}
+
+.primary__btn a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #fff;
+}
+.primary__btn a:hover {
+  color: inherit;
+}
+.secondary__btn {
+  background: transparent !important;
+  color: #0b2727 !important;
+  border: none !important;
+  font-weight: 500 !important;
+}
+
+.secondary__btn a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--heading-color);
+}
+
+.secondary__btn a:hover {
+  color: inherit;
+}
+
+.section__subtitle {
+  background: var(--secondary-color);
+  font-family: var(--subtitle-font-name);
+  width: max-content;
+  padding: 0px 0.5rem;
+  padding-right: 1rem;
+
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: var(--heading-color);
 }
